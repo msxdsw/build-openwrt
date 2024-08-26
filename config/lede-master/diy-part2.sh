@@ -18,6 +18,8 @@ sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/auto
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/lean/default-settings/files/zzz-default-settings
 echo "DISTRIB_SOURCECODE='lede'" >>package/base-files/files/etc/openwrt_release
 
+sed -i '$a src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld.git' feeds.conf.default
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
  sed -i 's/192.168.1.1/192.168.22.1/g' package/base-files/files/bin/config_generate
 
