@@ -24,7 +24,7 @@ sed -i '$a src-git kenzok https://github.com/kenzok8/small' feeds.conf.default
 
 sed -i '/^UBOOT_TARGETS := rk3528-evb rk3588-evb/s/^/#/' package/boot/uboot-rk35xx/Makefile
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
- sed -i 's/192.168.1.1/192.168.22.1/g' package/base-files/files/bin/config_generate
+# sed -i 's/192.168.1.1/192.168.22.1/g' package/base-files/files/bin/config_generate
 
 # Replace the default software source
 # sed -i 's#openwrt.proxy.ustclug.org#mirrors.bfsu.edu.cn\\/openwrt#' package/lean/default-settings/files/zzz-default-settings
