@@ -19,9 +19,9 @@ sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package
 echo "DISTRIB_SOURCECODE='lede'" >>package/base-files/files/etc/openwrt_release
 
 sed -i '$a src-git kenzok2 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git kenzok https://github.com/kenzok8/small' feeds.conf.default
+#sed -i '$a src-git kenzok https://github.com/kenzok8/small' feeds.conf.default
 
-sed -i '/^UBOOT_TARGETS := rk3528-evb rk3588-evb/s/^/#/' package/boot/uboot-rk35xx/Makefile
+#sed -i '/^UBOOT_TARGETS := rk3528-evb rk3588-evb/s/^/#/' package/boot/uboot-rk35xx/Makefile
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
 # sed -i 's/192.168.1.1/192.168.22.1/g' package/base-files/files/bin/config_generate
 
